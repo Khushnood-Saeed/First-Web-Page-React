@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import React,{Component} from 'react'
 import './App.css';
 import Menu from './components/MenuComponents';
 import { Dishes } from './shared/dishes';
+import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom'
 class App extends Component {
 
 constructor(props){
@@ -13,9 +14,11 @@ constructor(props){
 }
 render(){
   return (
+    <BrowserRouter>
     <div>
-   <Menu dishes={this.state.dishes}/>
+   <Main/>
     </div>
+    </BrowserRouter>
   );
 }
 }
